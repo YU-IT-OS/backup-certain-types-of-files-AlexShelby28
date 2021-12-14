@@ -10,7 +10,7 @@ fi
 fileExtension="$1"
 targetDir="$2"
 finaldestinationDir="$3"
-echo "file extension is: $fileextension"
+echo "file extension is: $fileExtension"
 echo "target dir is: $targetDir"
 echo "backup directory is: $finaldestinationDir"
 if [ ! -d "$targetDir" ]
@@ -18,4 +18,4 @@ then
         echo "$targetDir" ]
         exit 0;
 fi
-find $targetDir -name *$fileExtention -exec cp  {} $finaldestinationDir \;
+find $targetDir -name *"$fileExtension" -exec cp  {} $finaldestinationDir \;
